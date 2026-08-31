@@ -11,7 +11,7 @@ defineProps({
 
 <template>
     <MainLayout>
-        <PageHero :image="'/wp-content/uploads/2024/12/Denco-when-house-is-being-constructed-construction-wast-2024-09-05-16-13-14-utc.jpg'">
+        <PageHero :image="'/images/gbp/crew-loading-trailer.jpg'">
             <p class="font-display text-sm font-semibold uppercase tracking-widest text-haz-400">Services</p>
             <h1 class="display-tight mt-2 text-5xl font-extrabold sm:text-6xl">Junk Removal Services</h1>
             <p class="mt-4 max-w-3xl text-lg text-asphalt-300">

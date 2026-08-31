@@ -7,7 +7,7 @@ defineProps({ seo: Object });
 
 <template>
     <MainLayout>
-        <PageHero :image="'/wp-content/uploads/2024/12/Denco-eco-warriors-unite-community-cleanup-effort-2024-11-14-08-51-29-utc.jpg'">
+        <PageHero :image="'/images/gbp/owner-with-loaded-trailer.jpg'">
             <p class="font-display text-sm font-semibold uppercase tracking-widest text-haz-400">About</p>
             <h1 class="display-tight mt-2 text-5xl font-extrabold sm:text-6xl">Welcome to Mile High Haul-Off Ltd</h1>
             <p class="mt-4 max-w-2xl text-lg text-asphalt-300">

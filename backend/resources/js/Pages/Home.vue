@@ -38,9 +38,9 @@ const steps = [
         <section class="relative overflow-hidden bg-asphalt-950 text-paper-50">
             <div class="absolute inset-0" aria-hidden="true">
                 <img
-                    :src="'/wp-content/uploads/2024/12/Denco-male-sorter-with-a-protective-vest-gloves-unloads-2024-11-27-09-50-44-utc.jpg'"
+                    :src="'/images/gbp/trailer-loaded-furniture.jpg'"
                     alt=""
-                    class="h-full w-full object-cover object-[75%_center] opacity-35"
+                    class="h-full w-full object-cover object-[70%_center] opacity-40"
                     fetchpriority="high"
                 />
                 <div class="absolute inset-0 bg-gradient-to-r from-asphalt-950 via-asphalt-950/85 to-asphalt-950/40"></div>
