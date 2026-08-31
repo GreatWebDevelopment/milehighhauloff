@@ -1,0 +1,171 @@
+/*
+Theme Name: Spacewalker
+Description: Child theme for Uncode theme
+Author: Rounded Digital
+Author URI: https://wearerounded.com
+Template: uncode
+Version: 1.0.0
+Text Domain: uncode
+*/
+
+/*----------------------------------------------------------
+#Button Styles
+----------------------------------------------------------*/
+/* unsets transform on smaller devices */
+@media (max-width: 569px) {
+    a.custom-link.btn.rd-btn.rd-btn-transform-none-mobile {
+        transform:none;
+    }
+}
+/* full width devices */
+@media (max-width: 569px) {
+    a.custom-link.btn.rd-btn.rd-btn-fluid-mobile {
+        width:100%;
+    }
+}
+@media (max-width: 959px) {
+	.btn-container a.custom-link.btn.rd-btn-fluid-mobile {
+		width: 100%;
+	}
+}
+
+/*----------------------------------------------------------
+#Custom Menu Element (Columns)
+----------------------------------------------------------*/
+/* Custom menu columns */
+@media (min-width: 959px) {
+    .rd-custom_menu-columns_2 .menu {
+        column-count: 2;
+    }
+    .rd-custom_menu-columns_3 .menu {
+        column-count: 3;
+    }
+}
+
+
+/*----------------------------------------------------------
+#Footer logo
+----------------------------------------------------------*/
+/* max height */
+a#footer_logo img {
+    max-height: 65px;
+}
+@media (max-width: 959px){
+	div#rd-footer-logo .tmb .t-entry-visual img {
+		width: 50%;
+	}
+}
+
+
+/*----------------------------------------------------------
+#Footer copyright row ID=rd_footer_row_copyright
+----------------------------------------------------------*/
+@media (min-width: 959px) {
+    div#rd_footer_row_copyright .uncont {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    div#rd_footer_row_copyright .uncont > *:not(:first-child) {
+        margin-top: unset;
+    }
+
+    div#rd_footer_row_copyright .uncont .uncode-vc-social p {
+        margin-top: unset;
+    }
+}
+
+/*----------------------------------------------------------
+#Link Styles (Add Emoji)
+----------------------------------------------------------*/
+a#rd_link_call.rd-link-add_emoji:before,
+a#rd_link_text.rd-link-add_emoji:before,
+a#rd_link_email.rd-link-add_emoji:before,
+a#rd_link_booking.rd-link-add_emoji:before,
+a#rd_link_directions.rd-link-add_emoji:before {
+  margin-right: 0.5em;
+}
+
+a#rd_link_call.rd-link-add_emoji:before {
+  content: "📞";
+}
+
+a#rd_link_text.rd-link-add_emoji:before {
+  content: "💬";
+}
+
+a#rd_link_email.rd-link-add_emoji:before {
+  content: "📩";
+}
+
+a#rd_link_booking.rd-link-add_emoji:before {
+  content: "📅";
+}
+
+a#rd_link_directions.rd-link-add_emoji:before {
+  content: "📍";
+}
+
+/*----------------------------------------------------------
+#Link Styles (Add Text)
+----------------------------------------------------------*/
+a#rd_link_call.rd-link-add_text:before,
+a#rd_link_text.rd-link-add_text:before,
+a#rd_link_email.rd-link-add_text:before,
+a#rd_link_booking.rd-link-add_text:before,
+a#rd_link_directions.rd-link-add_text:before {
+  margin-right: 0.5em;
+  font-weight: bold;
+}
+
+a#rd_link_call.rd-link-add_text:before {
+  content: "Call:";
+}
+
+a#rd_link_text.rd-link-add_text:before {
+  content: "Text:";
+}
+
+a#rd_link_email.rd-link-add_text:before {
+  content: "Email:";
+}
+
+a#rd_link_booking.rd-link-add_text:before {
+  content: "Book Now:";
+}
+
+a#rd_link_directions.rd-link-add_text:before {
+  content: "Get Directions:";
+}
+
+/*----------------------------------------------------------
+
+Footer Button Group (id="rd_footer_cta_buttons")
+
+----------------------------------------------------------*/
+/* ------------------------------------ Flexbox Container */
+ul#rd_footer_cta_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* --------------------------------- Flexbox Single Items */
+/* Expands width of single items equally */
+ul#rd_footer_cta_buttons li.rd-btn-container {
+  flex-grow: 1;
+}
+
+/* Targets first single item */
+ul#rd_footer_cta_buttons li.rd-btn-container:first-of-type {}
+
+/* Aligns last single item to right */
+ul#rd_footer_cta_buttons li.rd-btn-container:last-of-type {
+  text-align: right;
+}
+
+/* ------------------ Flexbox Single Item contents (links) */
+/* Expands width of button full width, minus .5em */
+ul#rd_footer_cta_buttons li.rd-btn-container a {
+  width: calc(100% - .5em);
+}

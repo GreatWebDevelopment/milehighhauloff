@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /submit/
+Disallow: /invoice/
+
+Sitemap: https://milehighhauloff.com/sitemap.xml

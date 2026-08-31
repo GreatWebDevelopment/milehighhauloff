@@ -1,0 +1,51 @@
+@import url('https://fonts.bunny.net/css?family=barlow:400,500,600,700|barlow-condensed:500,600,700,800&display=swap');
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+    --font-sans: 'Barlow', ui-sans-serif, system-ui, sans-serif;
+    --font-display: 'Barlow Condensed', 'Barlow', sans-serif;
+
+    /* Asphalt & amber — highway signage palette */
+    --color-asphalt-950: #14161a;
+    --color-asphalt-900: #1b1e24;
+    --color-asphalt-800: #262a33;
+    --color-asphalt-700: #363c48;
+    --color-asphalt-500: #5d6673;
+    --color-asphalt-300: #a8afba;
+    --color-paper-50: #f8f6f1;
+    --color-paper-100: #f1eee6;
+    --color-paper-200: #e5e0d3;
+    --color-haz-400: #fbb731;
+    --color-haz-500: #f59e0b;
+    --color-haz-600: #d97706;
+    --color-olive-600: #5b6242;
+    --color-olive-700: #474d33;
+}
+
+/* Hazard stripe — used as section divider */
+.hazard-stripe {
+    height: 8px;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--color-haz-500),
+        var(--color-haz-500) 14px,
+        var(--color-asphalt-950) 14px,
+        var(--color-asphalt-950) 28px
+    );
+}
+
+.display-tight {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    line-height: 0.95;
+}
+
+/* Long-form WordPress content (services + blog posts) */
+.wp-content {
+    @apply prose prose-lg max-w-none prose-headings:font-display prose-headings:uppercase prose-headings:tracking-tight prose-headings:text-asphalt-900 prose-a:text-haz-600 prose-strong:text-asphalt-900 prose-li:marker:text-haz-500;
+}
+.wp-content img {
+    @apply rounded-lg;
+}
