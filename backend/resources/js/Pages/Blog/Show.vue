@@ -1,6 +1,7 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
 import MainLayout from '../../Layouts/MainLayout.vue';
+import PageHero from '../../Components/PageHero.vue';
 
 const props = defineProps({
     post: Object,
@@ -16,8 +17,8 @@ function formatDate(iso) {
 
 <template>
     <MainLayout>
-        <section class="bg-asphalt-950 text-paper-50">
-            <div class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
+        <PageHero :image="post.og_image">
+            <div class="mx-auto max-w-4xl">
                 <nav class="font-display text-sm font-semibold uppercase tracking-widest text-asphalt-300">
                     <Link href="/" class="hover:text-haz-400">Home</Link>
                     <span class="mx-2 text-asphalt-500">/</span>
@@ -28,8 +29,7 @@ function formatDate(iso) {
                     {{ formatDate(post.published_at) }}
                 </p>
             </div>
-            <div class="hazard-stripe"></div>
-        </section>
+        </PageHero>
 
         <article class="mx-auto max-w-3xl px-4 py-16 sm:px-6">
             <div class="wp-content" v-html="post.content"></div>

@@ -1,6 +1,7 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
 import MainLayout from '../../Layouts/MainLayout.vue';
+import PageHero from '../../Components/PageHero.vue';
 
 defineProps({
     posts: { type: Array, default: () => [] },
@@ -22,16 +23,13 @@ function formatDate(iso) {
 
 <template>
     <MainLayout>
-        <section class="bg-asphalt-950 text-paper-50">
-            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-                <p class="font-display text-sm font-semibold uppercase tracking-widest text-haz-400">Blog</p>
-                <h1 class="display-tight mt-2 text-5xl font-extrabold sm:text-6xl">Tips from the crew</h1>
-                <p class="mt-4 max-w-2xl text-lg text-asphalt-300">
-                    Junk removal tips, cleanout guides, and seasonal advice for Denver homeowners and businesses.
-                </p>
-            </div>
-            <div class="hazard-stripe"></div>
-        </section>
+        <PageHero :image="'/wp-content/uploads/2024/12/Denco-collecting-the-garbage-and-separating-waste-to-fre-2023-11-27-05-17-10-utc.jpg'">
+            <p class="font-display text-sm font-semibold uppercase tracking-widest text-haz-400">Blog</p>
+            <h1 class="display-tight mt-2 text-5xl font-extrabold sm:text-6xl">Tips from the crew</h1>
+            <p class="mt-4 max-w-2xl text-lg text-asphalt-300">
+                Junk removal tips, cleanout guides, and seasonal advice for Denver homeowners and businesses.
+            </p>
+        </PageHero>
 
         <section class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
             <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

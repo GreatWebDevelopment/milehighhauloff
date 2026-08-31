@@ -1,21 +1,19 @@
 <script setup>
 import MainLayout from '../Layouts/MainLayout.vue';
+import PageHero from '../Components/PageHero.vue';
 
 defineProps({ seo: Object });
 </script>
 
 <template>
     <MainLayout>
-        <section class="bg-asphalt-950 text-paper-50">
-            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-                <p class="font-display text-sm font-semibold uppercase tracking-widest text-haz-400">About</p>
-                <h1 class="display-tight mt-2 text-5xl font-extrabold sm:text-6xl">Welcome to Mile High Haul-Off Ltd</h1>
-                <p class="mt-4 max-w-2xl text-lg text-asphalt-300">
-                    Your trusted partner for junk removal and yard cleanup in the Denver area.
-                </p>
-            </div>
-            <div class="hazard-stripe"></div>
-        </section>
+        <PageHero :image="'/wp-content/uploads/2024/12/Denco-eco-warriors-unite-community-cleanup-effort-2024-11-14-08-51-29-utc.jpg'">
+            <p class="font-display text-sm font-semibold uppercase tracking-widest text-haz-400">About</p>
+            <h1 class="display-tight mt-2 text-5xl font-extrabold sm:text-6xl">Welcome to Mile High Haul-Off Ltd</h1>
+            <p class="mt-4 max-w-2xl text-lg text-asphalt-300">
+                Your trusted partner for junk removal and yard cleanup in the Denver area.
+            </p>
+        </PageHero>
 
         <section class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
             <p class="text-lg leading-relaxed">

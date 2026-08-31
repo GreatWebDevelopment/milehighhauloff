@@ -19,7 +19,7 @@ $seo = fn (string $title, string $description, array $extra = []) => array_merge
 
 // Home
 Route::get('/', fn () => Inertia::render('Home', [
-    'services' => Service::published()->orderBy('sort_order')->get(['slug', 'name', 'meta_description']),
+    'services' => Service::published()->orderBy('sort_order')->get(['slug', 'name', 'meta_description', 'og_image']),
     'seo' => [
         'title' => 'Professional Junk Removal & Yard Cleanup Services in Denver Metro Area | Mile High Haul-Off',
         'description' => 'Mile High Haul-Off is a veteran-owned junk removal service in Denver, CO, offering fast and reliable hauling for residential and commercial needs. From construction debris to old appliances, yard waste, furniture, and hoarder cleanouts, we provide eco-friendly, hassle-free solutions to keep your space clean and organized.',

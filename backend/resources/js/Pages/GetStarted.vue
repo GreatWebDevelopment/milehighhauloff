@@ -3,6 +3,7 @@ import { usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 import MainLayout from '../Layouts/MainLayout.vue';
 import QuoteForm from '../Components/QuoteForm.vue';
+import PageHero from '../Components/PageHero.vue';
 
 defineProps({
     services: { type: Array, default: () => [] },
@@ -13,14 +14,11 @@ const site = computed(() => usePage().props.site);
 
 <template>
     <MainLayout>
-        <section class="bg-asphalt-950 text-paper-50">
-            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-                <p class="font-display text-sm font-semibold uppercase tracking-widest text-haz-400">Get Started</p>
-                <h1 class="display-tight mt-2 text-5xl font-extrabold sm:text-6xl">Request a Quote</h1>
-                <p class="mt-4 max-w-2xl text-lg text-asphalt-300">Contact us today to receive a free quote!</p>
-            </div>
-            <div class="hazard-stripe"></div>
-        </section>
+        <PageHero :image="'/wp-content/uploads/2024/12/Denco-movers-in-uniform-and-medical-masks-lifting-glass-2024-11-14-20-52-53-utc.jpg'">
+            <p class="font-display text-sm font-semibold uppercase tracking-widest text-haz-400">Get Started</p>
+            <h1 class="display-tight mt-2 text-5xl font-extrabold sm:text-6xl">Request a Quote</h1>
+            <p class="mt-4 max-w-2xl text-lg text-asphalt-300">Contact us today to receive a free quote!</p>
+        </PageHero>
 
         <section class="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-5">
             <div class="lg:col-span-3">

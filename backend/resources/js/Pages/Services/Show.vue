@@ -2,6 +2,7 @@
 import { Link, usePage } from '@inertiajs/vue3';
 import { computed } from 'vue';
 import MainLayout from '../../Layouts/MainLayout.vue';
+import PageHero from '../../Components/PageHero.vue';
 
 const props = defineProps({
     service: Object,
@@ -13,9 +14,8 @@ const site = computed(() => usePage().props.site);
 
 <template>
     <MainLayout>
-        <section class="bg-asphalt-950 text-paper-50">
-            <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6">
-                <nav class="font-display text-sm font-semibold uppercase tracking-widest text-asphalt-300">
+        <PageHero :image="service.og_image">
+            <nav class="font-display text-sm font-semibold uppercase tracking-widest text-asphalt-300">
                     <Link href="/" class="hover:text-haz-400">Home</Link>
                     <span class="mx-2 text-asphalt-500">/</span>
                     <Link href="/services" class="hover:text-haz-400">Services</Link>
@@ -38,9 +38,7 @@ const site = computed(() => usePage().props.site);
                         {{ site.phoneDisplay }}
                     </a>
                 </div>
-            </div>
-            <div class="hazard-stripe"></div>
-        </section>
+        </PageHero>
 
         <article class="mx-auto max-w-4xl px-4 py-16 sm:px-6">
             <div class="wp-content" v-html="service.content"></div>

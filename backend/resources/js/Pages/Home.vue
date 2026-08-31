@@ -36,6 +36,15 @@ const steps = [
     <MainLayout>
         <!-- Hero -->
         <section class="relative overflow-hidden bg-asphalt-950 text-paper-50">
+            <div class="absolute inset-0" aria-hidden="true">
+                <img
+                    :src="'/wp-content/uploads/2024/12/Denco-male-sorter-with-a-protective-vest-gloves-unloads-2024-11-27-09-50-44-utc.jpg'"
+                    alt=""
+                    class="h-full w-full object-cover object-[75%_center] opacity-35"
+                    fetchpriority="high"
+                />
+                <div class="absolute inset-0 bg-gradient-to-r from-asphalt-950 via-asphalt-950/85 to-asphalt-950/40"></div>
+            </div>
             <div
                 class="pointer-events-none absolute inset-0 opacity-[0.06]"
                 style="background-image: repeating-linear-gradient(-45deg, #fff 0, #fff 2px, transparent 2px, transparent 24px)"
@@ -114,13 +123,22 @@ const steps = [
                         v-for="service in services.slice(0, 6)"
                         :key="service.slug"
                         :href="`/services/${service.slug}`"
-                        class="group border border-paper-200 bg-white p-6 transition hover:-translate-y-1 hover:border-haz-500 hover:shadow-lg"
+                        class="group flex flex-col overflow-hidden border border-paper-200 bg-white transition hover:-translate-y-1 hover:border-haz-500 hover:shadow-lg"
                     >
-                        <h3 class="font-display text-2xl font-bold uppercase leading-tight tracking-tight text-asphalt-900 group-hover:text-haz-600">
-                            {{ service.name }}
-                        </h3>
-                        <p class="mt-3 line-clamp-3 text-asphalt-700">{{ service.meta_description }}</p>
-                        <p class="mt-4 font-display font-bold uppercase tracking-wide text-haz-600">View Service →</p>
+                        <img
+                            v-if="service.og_image"
+                            :src="service.og_image"
+                            :alt="service.name"
+                            loading="lazy"
+                            class="aspect-[16/9] w-full object-cover"
+                        />
+                        <div class="flex grow flex-col p-6">
+                            <h3 class="font-display text-2xl font-bold uppercase leading-tight tracking-tight text-asphalt-900 group-hover:text-haz-600">
+                                {{ service.name }}
+                            </h3>
+                            <p class="mt-3 line-clamp-3 grow text-asphalt-700">{{ service.meta_description }}</p>
+                            <p class="mt-4 font-display font-bold uppercase tracking-wide text-haz-600">View Service →</p>
+                        </div>
                     </Link>
                 </div>
             </div>
