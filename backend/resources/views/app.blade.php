@@ -13,6 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title inertia>{{ $title }}</title>
     <meta name="description" content="{{ $description }}">
+    @unless (app()->environment('production'))
+    <meta name="robots" content="noindex, nofollow">
+    @endunless
     <link rel="canonical" href="{{ $canonical }}" />
     <meta property="og:site_name" content="{{ $site['name'] }}" />
     <meta property="og:type" content="{{ ($seo['schema'] ?? null) === 'article' ? 'article' : 'website' }}" />
@@ -94,7 +97,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @inertiaHead
 
-    {{-- Google tag (carried over from old site's Site Kit container) --}}
+    {{-- Google tag (carried over from old site's Site Kit container); production only --}}
+    @if ($site['gtag_id'] && app()->environment('production'))
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ $site['gtag_id'] }}"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -102,6 +106,7 @@
         gtag('js', new Date());
         gtag('config', '{{ $site['gtag_id'] }}');
     </script>
+    @endif
 </head>
 <body class="antialiased">
     @inertia
