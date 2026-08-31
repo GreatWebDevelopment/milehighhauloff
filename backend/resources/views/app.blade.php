@@ -28,6 +28,7 @@
     <meta name="twitter:description" content="{{ $description }}" />
     <meta name="twitter:image" content="{{ $image }}" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="shortcut icon" href="/favicon.ico">
 
     {{-- LocalBusiness schema on every page --}}

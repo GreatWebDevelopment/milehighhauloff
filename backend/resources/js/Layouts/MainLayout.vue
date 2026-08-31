@@ -33,9 +33,14 @@ const nav = [
         <!-- Header -->
         <header class="sticky top-0 z-40 border-b border-paper-200 bg-paper-50/95 backdrop-blur">
             <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6">
-                <Link href="/" class="flex items-baseline gap-1.5">
-                    <span class="display-tight text-2xl font-extrabold text-asphalt-950">Mile High</span>
-                    <span class="display-tight text-2xl font-extrabold text-haz-500">Haul-Off</span>
+                <Link href="/" class="shrink-0">
+                    <img
+                        :src="'/images/logo-light-long.png'"
+                        alt="Mile High Haul-Off — Professional Junk Removal"
+                        class="h-10 w-auto sm:h-12"
+                        width="600"
+                        height="90"
+                    />
                 </Link>
                 <nav class="hidden items-center gap-8 md:flex">
                     <Link
@@ -131,8 +136,15 @@ const nav = [
         <footer class="border-t border-asphalt-800 bg-asphalt-950 text-asphalt-300">
             <div class="mx-auto grid max-w-7xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
                 <div>
-                    <p class="display-tight text-xl font-bold text-paper-50">Mile High <span class="text-haz-400">Haul-Off</span></p>
-                    <p class="mt-3 text-sm leading-relaxed">
+                    <img
+                        :src="'/images/logo-dark-long.png'"
+                        alt="Mile High Haul-Off — Professional Junk Removal"
+                        class="h-10 w-auto"
+                        width="600"
+                        height="90"
+                        loading="lazy"
+                    />
+                    <p class="mt-4 text-sm leading-relaxed">
                         Veteran-owned junk removal and yard cleanup serving the Denver metro area. Fast, reliable, and eco-friendly.
                     </p>
                     <p class="mt-4 text-sm">
