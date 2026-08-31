@@ -77,7 +77,7 @@ const steps = [
             <div class="grid items-start gap-10 lg:grid-cols-2">
                 <div>
                     <h2 class="display-tight text-4xl font-extrabold text-asphalt-950 sm:text-5xl">
-                        The Mile High <span class="text-haz-500">difference</span>
+                        The Mile High <span class="text-haz-600">difference</span>
                     </h2>
                     <p class="mt-5 text-lg leading-relaxed">
                         Whether you're clearing out a construction site, removing unwanted items, or restoring order
